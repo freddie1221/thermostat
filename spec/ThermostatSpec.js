@@ -67,14 +67,30 @@ describe('Thermostat', function() {
     });
   });
 
-  describe('#reset', function() {
+  describe('#resetTemperature', function() {
     it('resets the temperature', function() {
       thermostat.increase();
-      thermostat.reset();
+      thermostat.resetTemperature();
       expect(thermostat.temperature).toEqual(20);
     });
   });
 
+
+  describe('#energyUsage', function() {
+    it('indicates medium-usage for 20 degrees', function() {
+      thermostat.resetTemperature(20);
+      expect(thermostat.energyUsage()).toEqual('medium-usage');
+    });
+    it('indicates low-usage for 17 degrees', function() {
+      thermostat.resetTemperature(17);
+      expect(thermostat.energyUsage()).toEqual('low-usage');
+    });
+    it('indicates high-usage for 28 degrees', function() {
+      thermostat.resetTemperature(28);
+      expect(thermostat.energyUsage()).toEqual('high-usage');
+    });
+
+  });
   
 
 });
