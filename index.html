@@ -1,37 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <script src="src/Thermostat.js"></script>
-    <link rel="stylesheet" href="/Users/mathou/Projects/JAVASCRIPT/freddie_thermostat/style.css">
-    <title>Thermostat</title>
-  </head>
-  <body>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Thermostat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <div id="wrapper">
+  <script src="./jquery.js"></script>
+  <script src="src/thermostat.js"></script>
+  <script src="./interface.js"></script>
 
-    <div class="temperature">
-      25°C
-    </div>
+  <div id="wrapper">
 
-    <div class="power_usage_indicator" id="red">
-    </div>
-    <div class="power_usage_indicator" id="black">
-    </div>
-    <div class="power_usage_indicator" id="green">
+    <div id="thermo_body">
+        <span id="temp">20</span>
     </div>
 
-    <div class="controllers">
-      <button type="button" name="reset">Reset</button>
-      <button type="button" name="powerSavingMode">Power Saving Mode</button>
-      <button type="button" name="increase">Increase</button>
-      <button type="button" name="decrease">Decrease</button>
+    <div class="btn" id="minus"><p class="btn-icon">-</p></div>
+
+    <div id="utility_btn">
+      <div class="btn" id="reset"><p class="btn-text">reset</p></div>
+      <div class="btn" id="energy"><p class="btn-text">energy usage</p></div>
+      <div class="btn" id="powerSave"><p class="btn-text">power save</p></div>
     </div>
+
+    <div class="btn" id="plus"><p class="btn-icon">+</p></div>
 
   </div>
 
-
-
-
-  </body>
+</body>
 </html>
