@@ -39,7 +39,18 @@
   background-color: darkseagreen;
   }
   
-  #energy {
+  .low-usage {
+  background-color: green;
+  color: white;
+  }
+
+  .medium-usage {
+  background-color: black;
+  color: white;
+  }
+
+  .high-usage {
+  background-color: red;
   color: white;
   }
   
